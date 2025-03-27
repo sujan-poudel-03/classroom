@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- First TextView at the top of the screen -->
+        <TextView
+            android:id="@+id/first_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello from RelativeLayout"
+            android:layout_alignParentTop="true" />
+
+        <!-- Second TextView positioned below the first one -->
+        <TextView
+            android:id="@+id/second_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Second Content"
+            android:layout_below="@id/first_text_view"/>
+<!--            android:layout_marginTop="20dp" />-->
+
+        <!-- Third TextView positioned relative to the second one (aligned to the right) -->
+        <TextView
+            android:id="@+id/third_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Third Text"
+            android:layout_toEndOf="@id/second_text_view"
+            android:layout_alignBaseline="@id/second_text_view"
+            android:layout_marginStart="20dp" />
+
+        <!-- Button aligned to the center of the screen -->
+        <Button
+            android:id="@+id/center_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Center Button"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp" />
+
+        <!-- ImageView positioned at the bottom right corner -->
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:layout_below="@+id/second_text_view"/>
+
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:layout_marginEnd="20dp"/>-->
+        <CheckBox
+            android:id="@+id/happy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Happy"
+            android:layout_below="@+id/image_view"/>
+
+        <CheckBox
+            android:id="@+id/sad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sad"
+            android:layout_above="@+id/happy"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/happy"
+            android:entries="@array/fruits"
+            />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
