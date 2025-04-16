@@ -13,21 +13,33 @@
         android:theme="@style/Theme.Classroom"
         tools:targetApi="31">
         <activity
+            android:name=".StaticFragmentDemo"
+            android:exported="true">
+            <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>
+        <activity
+            android:name=".FragmentExampleActivity"
+            android:exported="false"/>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity
             android:name=".ActivityLifecycleSecond"
             android:exported="false"
             android:theme="@style/Theme.Classroom" />
         <activity
-            android:name=".AcitvityLifecycleSecond"
-            android:exported="false" />
-        <activity
             android:name=".ActivityLifecycle"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" /> <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".TableLayout"
             android:exported="false" />
@@ -39,13 +51,11 @@
             android:exported="false" />
         <activity
             android:name=".LoginFormExample"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" /> <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".SecondActivity"
             android:exported="false" />
