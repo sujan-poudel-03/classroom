@@ -13,25 +13,32 @@
         android:theme="@style/Theme.Classroom"
         tools:targetApi="31">
         <activity
-            android:name=".Task"
-            android:exported="true"
-            android:theme="@style/Theme.Classroom">
+            android:name=".MenuActivity"
+            android:theme="@style/Theme.Classroom"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".StaticFragmentDemo"
+            android:name=".Task"
             android:exported="false"/>
+<!--            android:theme="@style/Theme.Classroom">-->
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
 <!--        </activity>-->
+        <activity
+            android:name=".StaticFragmentDemo"
+            android:exported="false" /> <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".FragmentExampleActivity"
             android:exported="false" /> <!-- <intent-filter> -->
