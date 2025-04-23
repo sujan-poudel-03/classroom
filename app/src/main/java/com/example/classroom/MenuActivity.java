@@ -118,5 +118,17 @@ public class MenuActivity extends AppCompatActivity {
                 .show();
     }
 
+    public void showSimpleDialog1(){
+        new AlertDialog.Builder(this).setTitle("Are you sure you want to exit")
+                .setMessage("Go for it")
+                .setPositiveButton(
+                        "Yes", (dialog, which) -> {
+                            finishAffinity();
+                        })
+                .setNegativeButton("No", (dialog, which) -> dialog.dismiss())
+                .create()
+                .show();
+    }
+
 
 }
