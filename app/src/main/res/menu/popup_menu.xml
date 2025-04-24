@@ -2,9 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/popup_item_one"
-        android:title="popup option 1"/>
+        android:title="ListView"/>
 
     <item
         android:id="@+id/popup_item_two"
-        android:title="popup option 2"/>
+        android:title="GridView"/>
+
+    <item
+        android:id="@+id/popup_item_three"
+        android:title="RecyclerView"/>
 </menu>

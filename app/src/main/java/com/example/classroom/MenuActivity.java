@@ -1,5 +1,6 @@
 package com.example.classroom;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -38,9 +39,14 @@ public class MenuActivity extends AppCompatActivity {
             popupMenu.setOnMenuItemClickListener(item -> {
                 if (item.getItemId() == R.id.popup_item_one) {
                     Toast.makeText(this, "Popup Option 1 clicked", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MenuActivity.this, ListViewActivity.class );
+                    startActivity(intent);
+
                     return true;
                 } else if (item.getItemId() == R.id.popup_item_two) {
                     Toast.makeText(this, "Popup Option 2 clicked", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MenuActivity.this, GridViewActivity.class);
+                    startActivity(intent);
                     return true;
                 }
                 return false;
@@ -74,12 +80,15 @@ public class MenuActivity extends AppCompatActivity {
 
         if(id==R.id.option_two){
             Toast.makeText(this, "Option 2 is clicked", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MenuActivity.this, CustomListViewActivity.class);
+            startActivity(intent);
             return true;
         }
 
         return super.onOptionsItemSelected(menuItem);
 
     }
+
 
     // this is for context menu
     @Override

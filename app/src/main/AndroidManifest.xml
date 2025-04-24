@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <application
         android:allowBackup="true"
@@ -11,11 +11,20 @@
         android:roundIcon="@drawable/inserted_image"
         android:supportsRtl="true"
         android:theme="@style/Theme.Classroom"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".CustomListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GridViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListViewActivity"
+            android:exported="false" />
         <activity
             android:name=".MenuActivity"
-            android:theme="@style/Theme.Classroom"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Classroom" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +33,12 @@
         </activity>
         <activity
             android:name=".Task"
-            android:exported="false"/>
-<!--            android:theme="@style/Theme.Classroom">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+            android:exported="false" /> <!-- android:theme="@style/Theme.Classroom"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
         <activity
             android:name=".StaticFragmentDemo"
             android:exported="false" /> <!-- <intent-filter> -->

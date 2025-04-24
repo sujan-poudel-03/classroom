@@ -6,5 +6,5 @@
 
     <item
         android:id="@+id/option_two"
-        android:title="Option 2"/>
+        android:title="Custom ListView"/>
 </menu>
