@@ -7,4 +7,8 @@
     <item
         android:id="@+id/option_two"
         android:title="Custom ListView"/>
+
+    <item
+        android:id="@+id/option_three"
+        android:title="RecyclerView"/>
 </menu>
