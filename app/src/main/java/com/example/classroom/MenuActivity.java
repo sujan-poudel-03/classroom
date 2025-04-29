@@ -77,16 +77,13 @@ public class MenuActivity extends AppCompatActivity {
 //            Toast.makeText(this, "Option 1 is clicked", Toast.LENGTH_SHORT).show();
             return true;
         }
-
         if(id==R.id.option_two){
             Toast.makeText(this, "Option 2 is clicked", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MenuActivity.this, CustomListViewActivity.class);
             startActivity(intent);
             return true;
         }
-
         return super.onOptionsItemSelected(menuItem);
-
     }
 
 
