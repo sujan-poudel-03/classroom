@@ -36,12 +36,16 @@ public class FruitAdapterForRecyclerView extends RecyclerView.Adapter<FruitAdapt
         return new FruitViewHolder(view);
     }
 
+    // Called to bind data to an existing ViewHolder at a specific position
     @Override
     public void onBindViewHolder(@NonNull FruitViewHolder holder, int position) {
+        // Get the fruit item at the current position
         FruitModel fruitModel = fruitList.get(position);
+        // Set image and name from model into the item view
         holder.fruit_image.setImageResource(fruitModel.getImage());
         holder.fruit_name.setText(fruitModel.getName());
 
+        // Add a click listener to each item view
         holder.itemView.setOnClickListener(v -> {
             Toast.makeText(context, "Cliced : " + fruitModel.getName(), Toast.LENGTH_SHORT).show();
         });
