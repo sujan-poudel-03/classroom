@@ -51,20 +51,21 @@ public class FruitAdapterForRecyclerView extends RecyclerView.Adapter<FruitAdapt
         });
     }
 
+    // Returns the total number of items in the data set
     @Override
     public int getItemCount(){
         return fruitList.size();
     }
 
+    // ViewHolder class that holds references to the views inside each item layout
     public static class FruitViewHolder extends RecyclerView.ViewHolder {
-
-        TextView fruit_name;
-        ImageView fruit_image;
 
         public FruitViewHolder(@NonNull View itemView) {
          super(itemView);
-            fruit_name = itemView.findViewById(R.id.fruit_name);
-            fruit_image = itemView.findViewById(R.id.fruit_image);
+        // Initialize view references using IDs from the layout file
+        TextView fruit_name = itemView.findViewById(R.id.fruit_name);
+        ImageView fruit_image = itemView.findViewById(R.id.fruit_image);
+
         }
 
     }
