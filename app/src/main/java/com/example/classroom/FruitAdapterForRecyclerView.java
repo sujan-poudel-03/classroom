@@ -30,7 +30,9 @@ public class FruitAdapterForRecyclerView extends RecyclerView.Adapter<FruitAdapt
     @NonNull
     @Override
     public FruitViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+        // Inflate the layout for a single grid item
         View view = LayoutInflater.from(context).inflate(R.layout.custom_grid_item, parent, false);
+        // Return a new ViewHolder that wraps the inflated view
         return new FruitViewHolder(view);
     }
 
