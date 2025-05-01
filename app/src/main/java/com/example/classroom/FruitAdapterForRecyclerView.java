@@ -25,6 +25,8 @@ public class FruitAdapterForRecyclerView extends RecyclerView.Adapter<FruitAdapt
         this.context = context;
         this.fruitList = fruitList;
     }
+
+    // Called only when a new ViewHolder is needed (i.e., not recycled)
     @NonNull
     @Override
     public FruitViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
