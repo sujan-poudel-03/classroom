@@ -10,5 +10,5 @@
 
     <item
         android:id="@+id/option_three"
-        android:title="RecyclerView"/>
+        android:title="Custom GridView"/>
 </menu>

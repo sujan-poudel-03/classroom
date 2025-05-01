@@ -48,8 +48,13 @@ public class MenuActivity extends AppCompatActivity {
                     Intent intent = new Intent(MenuActivity.this, GridViewActivity.class);
                     startActivity(intent);
                     return true;
-                }
-                return false;
+                } else if (item.getItemId() == R.id.popup_item_three) {
+                Toast.makeText(this, "Popup Option 3 clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MenuActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
             });
 
             popupMenu.show();
@@ -82,6 +87,11 @@ public class MenuActivity extends AppCompatActivity {
             Intent intent = new Intent(MenuActivity.this, CustomListViewActivity.class);
             startActivity(intent);
             return true;
+        }
+        if (id == R.id.option_three) {
+            Toast.makeText(this, "Heading towards Custom GridView", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(MenuActivity.this, CustomGridActivityView.class);
+            startActivity(i);
         }
         return super.onOptionsItemSelected(menuItem);
     }

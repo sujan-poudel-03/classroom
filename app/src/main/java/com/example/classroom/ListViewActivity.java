@@ -14,15 +14,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ListViewActivity extends AppCompatActivity {
 
-    ListView listView;
-    String[] countries = {"Nepal", "India", "China",
-            "USA","Nepal", "India", "China",
-            "USA","Nepal", "India", "China",
-            "USA","Nepal", "India", "China",
-            "USA","Nepal", "India", "China",
-            "USA","Nepal", "India", "China",
-            "USA"
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +26,17 @@ public class ListViewActivity extends AppCompatActivity {
             return insets;
         });
 
-        listView = findViewById(R.id.listView);
+//        ListView listView;
+        String[] countries = {"Nepal", "India", "China",
+                "USA","Nepal", "India", "China",
+                "USA","Nepal", "India", "China",
+                "USA","Nepal", "India", "China",
+                "USA","Nepal", "India", "China",
+                "USA","Nepal", "India", "China",
+                "USA"
+        };
+
+        ListView listView = findViewById(R.id.listView);
 
         // Step 1 : create a adapter to convert array to a listview items
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
