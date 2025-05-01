@@ -14,11 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+// Adapter class for binding fruit data to a RecyclerView
 public class FruitAdapterForRecyclerView extends RecyclerView.Adapter<FruitAdapterForRecyclerView.FruitViewHolder> {
 
-    Context context;
-    List<FruitModel> fruitList;
+    Context context;    // Activity context
+    List<FruitModel> fruitList;  // Data source: List of FruitModel items
 
+    // Constructor to initialize context and fruit list
     public FruitAdapterForRecyclerView(Context context, List<FruitModel> fruitList){
         this.context = context;
         this.fruitList = fruitList;
