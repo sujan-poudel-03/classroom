@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".database.NotesActivityWithDB">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Note ID (for update/delete) -->
+            <EditText
+                android:id="@+id/editId"
+                android:hint="Note ID"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Note Title -->
+            <EditText
+                android:id="@+id/editTitle"
+                android:hint="Note Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Note Content -->
+            <EditText
+                android:id="@+id/editContent"
+                android:hint="Note Content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Button Row -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnInsert"
+                    android:text="INSERT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:text="UPDATE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:text="DELETE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Display Button -->
+            <Button
+                android:id="@+id/btnDisplay"
+                android:text="DISPLAY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Display Area -->
+            <TextView
+                android:id="@+id/txtDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notes will appear here..."
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,6 +60,8 @@ public class FruitAdapterForRecyclerView extends RecyclerView.Adapter<FruitAdapt
     // ViewHolder class that holds references to the views inside each item layout
     public static class FruitViewHolder extends RecyclerView.ViewHolder {
 
+        TextView fruit_name;
+        ImageView fruit_image;
         public FruitViewHolder(@NonNull View itemView) {
          super(itemView);
         // Initialize view references using IDs from the layout file
