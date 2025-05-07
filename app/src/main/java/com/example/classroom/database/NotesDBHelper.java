@@ -14,11 +14,11 @@ public class NotesDBHelper extends SQLiteOpenHelper {
     public NotesDBHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
+
     // Called when db is first created
     public void onCreate(SQLiteDatabase db) {
         String createTableQuery = "CREATE TABLE " + TABLE_NAME +
                 " (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, content TEXT)";
-
         db.execSQL(createTableQuery);
     }
 
