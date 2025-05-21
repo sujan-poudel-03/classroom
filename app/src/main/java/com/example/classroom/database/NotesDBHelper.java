@@ -25,7 +25,7 @@ public class NotesDBHelper extends SQLiteOpenHelper {
     // called when db version is update
     @Override
     public  void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS" + TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
     }
 
     // insert a note
